@@ -1,16 +1,3 @@
-// TODOs
-// - Have a page that you can add and remove the participants? 
-//      This will cause problems and there will be a need to issue out new picks to people. 
-//      Have the person who's removed give their choice to their secret santa.
-// - (Done) Load in a file to get urlStarter, TheList, the message to send in "to.ejs", the seed, and the participants.
-// - (Done) Check and use defaults for any missing data that the user didn't provide.
-// - Check if the user got a unique URL from the rest.
-// - In the setup function, shorten it by using another for loop.
-// - Add Holiday designs to web pages.
-// - (Done) Clean up code.
-// - (Done) Document Code.
-
-
 // ********* Libraries ************
 const express = require("express"); 
 const ejs = require("ejs");
@@ -34,9 +21,14 @@ setup = setupEnv(setup);
 
 // ********* Set up the variables ******************
 const participants = setup.participants || ["Person 1", "Person 2", "Person 3"];
+
+// The URL to the server.
 const mainURL = setup.mainURL || "127.0.0.1";
-const port = setup.port || 8080; 
+const port = setup.port || 8080;
+
+// The path for the master list that holds all of the participants.
 const theList = setup.listURL || "TheList";
+
 const seed = setup.seed || 1;
 const before = setup.beforeMessage || "The Holidays are here, and ";
 const after = setup.afterMessage || " made the nice list. Get them something nice this year!";
