@@ -16,7 +16,7 @@ In the default settings this is `127.0.0.1:8080/TheList`.
 To change any of the defaults, edit the setup.env file.
 
 Here you'll need to change the main URL to the one your node server resides on.
-Do this by finding what out what the IP address on then editting the line under Main URL.
+Do this by finding what out what the IP address the server is on, then edit the line under "# Main URL".
 Doing this will change the address that you'll be given when serving out people's URLs.
 
 You'll probably want to change the list of participants too. Again do this by editting and 
